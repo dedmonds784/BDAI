@@ -114,15 +114,15 @@ def organize_articles_by_date(corpus):
 
 def apply_sentiments(tokens, method):
     if method == 'bing':
-        bing = pd.read_csv("/Users/dylanedmonds/Documents/data/BDAI/Data sets/bing_sents.csv")
+        bing = pd.read_csv("bing_sents.csv")
         corp_sents = tokens.merge(bing, on = 'word',how  = 'inner', right_index = True)
         corp_sents.drop('Unnamed: 0', axis = 1, inplace = True)
     if method == 'afinn':
-        afinn = pd.read_csv("/Users/dylanedmonds/Documents/data/BDAI/Data sets/afinn_sents.csv")
+        afinn = pd.read_csv("afinn_sents.csv")
         corp_sents = tokens.merge(afinn, on = 'word',how  = 'inner', right_index = True)
         corp_sents.drop('Unnamed: 0', axis = 1, inplace = True)
     if method == 'loughran':
-        loughran = pd.read_csv("/Users/dylanedmonds/Documents/data/BDAI/Data sets/loughran_sentiments.csv")
+        loughran = pd.read_csv("loughran_sentiments.csv")
         corp_sents = corp.merge(loughran, on = 'word',how  = 'inner', right_index = True)
         corp_sents.drop('Unnamed: 0', axis = 1, inplace = True)
     return corp_sents
