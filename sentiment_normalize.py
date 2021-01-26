@@ -16,7 +16,7 @@ mlp.plot(edit.index, edit.bing_Score)
 
 from datetime import datetime
 import quandl
-quandl.ApiConfig.api_key = "7LzB1WgatFjAEBFHKAv4"
+quandl.ApiConfig.api_key = "<insert key>"
 gm = sf.merge_sentiment_sources('Post-holdings', 'bing')
 gm1= sf.merge_sentiment_sources('Post-holdings', 'afinn')
 
