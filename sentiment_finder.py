@@ -12,7 +12,7 @@ import sys
 import newspaper as np 
 from nltk.tokenize import RegexpTokenizer
 from textblob import TextBlob
-def extract_articles(company, source, key= "79613011d94745a89fbd3067a42c9c0f"):
+def extract_articles(company, source, key= "<insert key>"):
     url = ['https://newsapi.org/v2/everything?', # organizes the url to the api
                'q=%s&'%(company),
                'sources=%s&'%(source),
